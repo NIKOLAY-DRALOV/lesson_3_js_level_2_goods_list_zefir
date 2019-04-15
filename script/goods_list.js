@@ -10,6 +10,8 @@ var  allProducts = {
    stickedMarshmellow: { title : 'Маршмеллоу на палочке', price : 500, src : 'image/products_photo/marsh_on_stick_photo/onstick_4_2.jpg' }
 };
 
+
+
 class CartItem {
     constructor (product) {
         this.title = product.title;
@@ -29,7 +31,6 @@ class CartItem {
     }
 
     addQuantity() {
-        console.log('Adding quantity');
         this.quantity += 1;
     }
 }
@@ -98,9 +99,9 @@ var openBasket = () => {
     goodsListSection.style.display = 'block';
 };
 
+
 var cart = new Cart();
 
-
 btnBasket.addEventListener('click', openBasket);
-// window.addEventListener('click', function (evt) {console.log(evt)});
+window.addEventListener('click', function (evt) {console.log(evt)});
 btnCloseCart.addEventListener ('click', function () {goodsListSection.style.display = 'none'});
